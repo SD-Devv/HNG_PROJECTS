@@ -1,44 +1,56 @@
-# **HNG12 Public API**  
+# HNG12 Public API
 
-This is my submission for the **Stage 0 Backend** task in the **HNG12 internship**. The API returns my **registered email**, the **current datetime in ISO 8601 format**, and the **GitHub URL** of the project.  
+This is my submission for the **Stage 0 Backend** task in the HNG12 internship.
 
-## **API Endpoint**  
+## API Endpoint
 
-### **GET `/`**  
-
-Returns:  
+### `GET /`
+Returns the following information:
 
 ```json
 {
   "email": "danielbuyikunmisolomon@gmail.com",
-  "current_datetime": "2025-01-30T09:30:00Z",
+  "current_datetime": "2024-01-29T14:35:00Z",
   "github_url": "https://github.com/SD-Devv/HNG_PROJECTS"
 }
-```  
+```
 
-## **How to Run Locally**  
+---
 
-1. Clone the repository:  
+## Running Locally
+
+1. Clone the repository:
    ```bash
-   git clone https://github.com/SD-Devv/HNG_PROJECTS.git && cd hng-public-api
-   ```  
-2. Install dependencies:  
+   git clone https://github.com/SD-Devv/HNG_PROJECTS.git
+   ```
+2. Install dependencies:
    ```bash
+   cd hng-public-api
    npm install
-   ```  
-3. Start the server:  
+   ```
+3. Run the app:
    ```bash
    node index.js
-   ```  
-   Runs at **`http://localhost:3000`**.  
+   ```
 
-## **Deployment**  
+---
 
-🔗 **Live API:** [https://hng-public-api.onrender.com](https://hng-public-api.onrender.com)  
+## Deployment
 
-## **Submission Compliance**  
+Deployed API:  
+[https://hng-public-api.onrender.com](https://hng-public-api.onrender.com)
 
-✅ Returns correct JSON response  
-✅ ISO 8601 timestamp (UTC)  
-✅ Hosted on **GitHub** (Public)  
-✅ **Deployed & publicly accessible**  
+---
+
+## Additional Resource
+
+Interested in **Node.js development**?  
+[https://hng.tech/hire/nodejs-developers](https://hng.tech/hire/nodejs-developers)
+```
+
+---
+
+### **Key Points:**
+- **API response example** in JSON format.
+- Clear steps to **run locally**.
+- **Correct deployment URL** and a **backlink** for Node.js hiring.
