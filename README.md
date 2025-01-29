@@ -46,11 +46,3 @@ Deployed API:
 
 Interested in **Node.js development**?  
 [https://hng.tech/hire/nodejs-developers](https://hng.tech/hire/nodejs-developers)
-```
-
----
-
-### **Key Points:**
-- **API response example** in JSON format.
-- Clear steps to **run locally**.
-- **Correct deployment URL** and a **backlink** for Node.js hiring.
