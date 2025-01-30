@@ -11,7 +11,7 @@ app.use(express.json());
 // API Endpoint
 app.get("/", (req, res) => {
   res.json({
-    email: "danielbuyikunmisolomon@gmail.com",
+    email: "danielsolomongs888@gmail.com",
     current_datetime: new Date().toISOString(),
     github_url: "https://github.com/SD-Devv/HNG_PROJECTS",
   });
