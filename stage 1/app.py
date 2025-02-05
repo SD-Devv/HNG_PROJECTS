@@ -50,6 +50,7 @@ def classify_number():
     try:
         number = int(number_param)
     except (ValueError, TypeError):
+        # Return the exact input value provided by the user
         return jsonify({
             "number": number_param,
             "error": True
@@ -61,7 +62,6 @@ def classify_number():
     ds = digit_sum(number)
     
     parity = "even" if number % 2 == 0 else "odd"
-    
     properties = [parity] if not armstrong_status else ["armstrong", parity]
 
     fun_fact = ""
