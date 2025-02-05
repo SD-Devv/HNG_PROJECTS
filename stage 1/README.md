@@ -21,7 +21,7 @@ The **Number Classification API** takes an integer as input and returns its math
 #### **❌ Error Response (400 Bad Request)**  
 ```json
 {
-    "number": "abc",
+    "number": "alphabet",
     "error": true
 }
 ```  
