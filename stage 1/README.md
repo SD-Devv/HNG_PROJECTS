@@ -17,6 +17,7 @@ The **Number Classification API** takes an integer as input and returns its math
     "fun_fact": "371 is an Armstrong number because 3^3 + 7^3 + 1^3 = 371"
 }
 ```  
+
 #### **❌ Error Response (400 Bad Request)**  
 ```json
 {
@@ -32,29 +33,23 @@ The **Number Classification API** takes an integer as input and returns its math
 git clone https://github.com/SD-username/number-classification-api.git
 cd number-classification-api
 ```  
+
 ### **2️⃣ Install Dependencies**  
-#### **Python (FastAPI)**  
 ```bash
 pip install -r requirements.txt
 ```  
-#### **Node.js (Express)**  
-```bash
-npm install
-```  
 
-### **3️⃣ Run the API**  
-#### **Python (FastAPI)**  
+### **3️⃣ Run the API Locally**  
+To run the API locally, use the following command:
 ```bash
-uvicorn app:app --reload
-```  
-#### **Node.js (Express)**  
-```bash
-node index.js
-```  
+python app.py
+```
+
+This will start the Flask API on `http://127.0.0.1:5000`.
 
 ## **Deployment**  
 The API is publicly accessible at:  
-👉 **`https://SD-deployment-url.com/api/classify-number?number=371`**  
+👉 **`https://hng-public-api.onrender.com/api/classify-number?number=371`**
 
 ## **License**  
-This project is licensed under the **MIT License**.  
+This project is licensed under the **MIT License**.
