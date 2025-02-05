@@ -4,7 +4,7 @@
 The **Number Classification API** takes an integer as input and returns its mathematical properties along with a fun fact.  
 
 ## **Endpoint**  
-### **GET /api/classify-number?number={integer}**  
+- **GET** `/api/classify-number?number=<integer>` 
 
 #### **✅ Success Response (200 OK)**  
 ```json
