@@ -43,7 +43,7 @@ def is_armstrong(n: int) -> bool:
 def digit_sum(n: int) -> int:
     return sum(int(d) for d in str(abs(n)))
 
-@app.route('/api/classify-number', methods=['GET'])
+@app.route('/classify-number', methods=['GET'])
 def classify_number():
     number_param = request.args.get('number')
 
