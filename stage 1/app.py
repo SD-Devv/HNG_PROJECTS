@@ -1,10 +1,15 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
+from flask_caching import Cache
 import requests
 import os
 
 app = Flask(__name__)
 CORS(app)
+
+app.config['CACHE_TYPE'] = 'simple'
+app.config['CACHE_DEFAULT_TIMEOUT'] = 3600
+cache = Cache(app)
 
 def is_prime(n: int) -> bool:
     if n <= 1:
@@ -50,7 +55,6 @@ def classify_number():
     try:
         number = int(number_param)
     except (ValueError, TypeError):
-        # Return the exact input value provided by the user
         return jsonify({
             "number": number_param,
             "error": True
@@ -63,16 +67,20 @@ def classify_number():
     
     parity = "even" if number % 2 == 0 else "odd"
     properties = [parity] if not armstrong_status else ["armstrong", parity]
-
-    fun_fact = ""
-    try:
-        response = requests.get(f"http://numbersapi.com/{number}/math", timeout=5)
-        if response.status_code == 200:
-            fun_fact = response.text
-        else:
+    
+    cache_key = f"fun_fact_{number}"
+    fun_fact = cache.get(cache_key)
+    
+    if fun_fact is None:
+        try:
+            response = requests.get(f"http://numbersapi.com/{number}/math", timeout=5)
+            if response.status_code == 200:
+                fun_fact = response.text
+            else:
+                fun_fact = "No fun fact available."
+        except Exception:
             fun_fact = "No fun fact available."
-    except Exception:
-        fun_fact = "No fun fact available."
+        cache.set(cache_key, fun_fact)
 
     result = {
         "number": number,
