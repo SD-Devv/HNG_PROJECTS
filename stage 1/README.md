@@ -30,8 +30,8 @@ The **Number Classification API** takes an integer as input and returns its math
 
 ### **1️⃣ Clone the Repository**  
 ```bash
-git clone https://github.com/SD-username/number-classification-api.git
-cd number-classification-api
+git clone https://github.com/SD-Devv/HNG_PROJECTS.git
+cd HNG_PROJECTS/stage%201
 ```  
 
 ### **2️⃣ Install Dependencies**  
